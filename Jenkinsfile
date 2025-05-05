@@ -9,7 +9,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build("abstergo-website:${BUILD_NUMBER}")
+                    dockerImage = docker.build("vedantvaidya/abstergo-website:${BUILD_NUMBER}")
                 }
             }
         }
