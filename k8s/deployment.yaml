@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: abstergo-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: abstergo
+  template:
+    metadata:
+      labels:
+        app: abstergo
+    spec:
+      containers:
+      - name: abstergo
+        image: vedantvaidya/abstergo-website:latest
+        ports:
+        - containerPort: 80
