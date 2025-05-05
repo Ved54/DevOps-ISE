@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Ved54/DevOps-ISE.git'
+                git ...
             }
         }
         stage('Build Docker Image') {
